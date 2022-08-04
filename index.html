@@ -87,7 +87,7 @@
         </section>
         <section id="CONTACT">
             <h1 class="headings">CONTACT</h1>
-            <form>
+            <form onsubmit="sendEmail(); reset(); return false;">
                <input type="text" id="name" placeholder="Your Name" required><br>
                <input type="text" id="email" placeholder="Email id" required>
                 <input type="text" id="phone" placeholder="Phone no" required>
@@ -97,7 +97,20 @@
             <a href="https://www.instagram.com/yatin.manjunath/"><img src="insta.png" height="75" width="60"  class="center" /></a>
             <a href="http://wa.me/917204971836"><img src="wt.png" height="75" width="60"  class="center" /></a>
         </section>
-    
-
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+function sendEmail(){
+Email.send({
+    Host : "smtp.gmail.com",
+    Username : "mosshed69420@gmail.com",
+    Password : "lostinanime",
+    To : 'yatinmanjunath.ym@gmail.com',
+    From : "document.getElementById("email").value,
+    Subject : "Enquiry",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+}
 </body>
 </html>
