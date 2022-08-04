@@ -97,7 +97,8 @@
             <a href="https://www.instagram.com/yatin.manjunath/"><img src="insta.png" height="75" width="60"  class="center" /></a>
             <a href="http://wa.me/917204971836"><img src="wt.png" height="75" width="60"  class="center" /></a>
         </section>
-<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
 <script>
 function sendEmail(){
 Email.send({
@@ -108,9 +109,9 @@ Email.send({
     From : "document.getElementById("email").value,
     Subject : "Enquiry",
     Body : "And this is the body"
-}).then(
-  message => alert(message)
+}).then(message => alert(message)
 );
 }
+</script>
 </body>
 </html>
